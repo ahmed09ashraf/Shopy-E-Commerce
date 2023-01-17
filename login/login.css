@@ -1,0 +1,107 @@
+input {
+    outline: 0;
+    caret-color: var(--caret-color);
+}
+
+.note {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logform , .regform , .resetForm{
+    display :flex ;
+    justify-content: center;
+}
+
+.login , .signup ,.reset {
+    margin: 50px 0;
+    max-width: 400px;
+    width: 100%;
+}
+.login{
+    display: block;
+}
+.signup,
+.reset {
+    display :none ;
+}
+.user , .pass ,.newPass , .fname , .lname ,.addr {
+    height : 50px ;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    margin :10px 0;
+    padding-left: 10px;
+}
+#form-tag-head {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form-pass-field {
+    position: relative;
+}
+
+.form-pass-field span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logform .login #logBtn,
+.regform .signup #signupBtn,
+.resetForm .reset #ResetBtn {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px 0 5px;
+}
+
+.regform .signup > input {
+    margin: 2px 0 20px;
+}
+
+.regform .signup .signup-pass-field input {
+    margin: 2px 0 5px;
+}
+
+#passhint {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#reset #form-tag-head {
+    font-size: 20px;
+}
+
+/* Style Of Error Box  */
+#error , #regError , #resetError{
+    margin: 10px 0 20px;
+    padding: 10px;
+    border: 0.5px solid #d33;
+    width: 100%;
+    color: #d33;
+    display: none;
+}
+
+#forget, #return {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+#RegisterNow,
+#loginNow {
+    cursor:pointer;
+    color :var(--secondary-color);
+}
+
+#showReg , #showLog , #showReset {
+    cursor: pointer ;
+}

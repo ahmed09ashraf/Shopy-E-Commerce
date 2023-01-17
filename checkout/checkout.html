@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>shopy</title>
+        <link
+            rel="shortcut icon"
+            href="../assets/images/favicon.png"
+            type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../global.css">
+        <link rel="stylesheet" href="../nav/nav.css">
+        <link rel="stylesheet" href="checkout.css">
+        <link rel="stylesheet" href="../footer/footer.css">
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+
+        <div class="mb-body-overlay"></div>
+        <header></header>
+
+        <!-- let's Start -->
+        <main>
+            <div class="result-head-banner">
+                <span>Checkout<span>
+            </div>
+            <div class="mycontainer">
+                <div class="CheckoutBig-div">
+                    <!------ first div contain User Products------>
+                    <div class="CheckoutSmall-div">
+                        <div class="checkout-Products">
+                            <h6 class="checkout-section-head mt-3">Your Product</h6>
+                            <!-- table of products -->
+                            <table class="productsTable">
+                                <thead class="productshead">
+                                    <tr>
+                                        <td>Product</td>
+                                        <td class="subTotal">Subtotal</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="productsbody">
+                                    <!-- the products will be added here -->
+                                    <!-- small example About what will be added-->
+                                    <!-- <tr> <td> <span>Product Name</span> <span>product Size</span>
+                                    <span>×product Qty</span> </td> <td class="subTotal">total price</td> </tr> <tr
+                                    class="totalPriceList"> <td>Total Price</td> <td class="subTotal">total
+                                    price</td> </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                    <!------ Second div contain the Address & Payment ------>
+                    <div class="CheckoutSmall-div">
+                        <!-- first part of Address -->
+                        <div class="checkout-Address">
+                            <h6 class="checkout-section-head">Choose Your Address</h6>
+                            <ul class="list-group" style="display: flex; justify-content: left; border: 0cm;">
+                                <div id="address-list">
+                                    <!-- new address will be added here -->
+                                    <!-- small example About what will be added-->
+                                    <!-- <li class="list-group-item"> <input class="form-check-input me-1"
+                                    type="radio" name="listGroupRadio"> </input> <label class="form-check-label"
+                                    >smoha-7 street behind hassan market</label> </li> -->
+                                </div>
+                                <!-- the add btn -->
+                                <button type="button" class="addAddress_btn">+ Add New Address</button>
+                                <div class="address-content">
+                                    <input type="text" class="input-type-text" id="newAddress" placeholder="Type New Address">
+                                    <button onclick="addAddress()" class="small-btns" id="addAddressBtn">Add</button>
+                                </div>
+                            </ul>
+                        </div>
+        
+                        <!-- Second part of Payment -->
+                        <div class="checkout-payment">
+                            <h6 class="checkout-section-head">Choose Your Payment Method</h6>
+                            <!---- Cash ---->
+                            <div class="payment-method-list">
+                                <label id="checkout-radio-input" class="form-check-label">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        checked="checked">
+                                    Cash
+                                </label>
+                            <!---- Credit Card ---->
+                                <label id="checkout-radio-input" class="form-check-label">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault">
+                                    Credit / Debit Card
+                                </label>
+                            <!---- PAYPAL ---->
+                                <label id="checkout-radio-input" class="form-check-label">
+                                    <input
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample"
+                                        aria-controls="collapseExample"
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault">
+                                    PAYPAL
+                                </label>
+                                <div class="collapse" id="collapseExample">
+                                    Pay securely with PayPal – you can pay with your credit or debit card if you
+                                    don’t have a PayPal account. Once payment is complete, you will automatically be
+                                    redirected back to Supereight.net
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Confirmation Button -->
+                        <button class="confirm-btn-in-checkout-page">
+                            Confirm Purchase
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div id="shopy-alert-overlay"></div>
+        <div id="shopy-alert-success">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+            <span>Successfully Purchased!</span>
+        </div>
+    </main>
+
+        <!-- some divs for all pages -->
+        <div class="menu-drawer"></div>
+        <div class="search-drawer"></div>
+        <div class="toolbar-mobile"></div>
+        <footer></footer>
+        <script src="../nav/printnav.js"></script>
+        <script src="../nav/nav.js"></script>
+        <script src="checkout.js"></script>
+        <script src="../footer/printfooter.js"></script>
+        <script src="../footer/footer.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
